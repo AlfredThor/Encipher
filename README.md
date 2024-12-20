@@ -1,22 +1,5 @@
-# python3AES-
-AES symmetrical encryption
 
-### 使用方式如下
-
-```python
-if __name__ == '__main__':
-    pattern_ecb = aescrypt('123478596','ECB','','utf8')
-    en_text = pattern_ecb.aesencrypt('My hero')
-    print('ECB加密模式密文:',en_text)
-    data = pattern_ecb.aesdecrypt('t7Amf9fH6H+0YOAsNLOKeA==')
-    print('ECB加密模式明文：',data)
-
-    pattern_cbc = aescrypt('859685','CBC','1252635241524152','utf8')
-    cbc_text = pattern_cbc.aesencrypt('My hero')
-    print('CBC加密模式密文：',cbc_text)
-    cbc_data = pattern_cbc.aesdecrypt(cbc_text)
-    print('CBC加密模式密文：',cbc_data)
-```
+## **[English](https://github.com/AlfredThor/Encipher)** **[中文](https://github.com/AlfredThor/Encipher/blob/master/README_CN.md)**
 
 ---
 
@@ -26,3 +9,40 @@ if __name__ == '__main__':
 - Decryption: Restore ciphertext to plain text.
 - Algorithm: A mathematical formula or method for encryption and decryption.
 - Key: A key part of encryption and decryption, security depends on the confidentiality of the key.
+
+---
+
+## Common Encryption Methods
+
+### One-Way Encryption
+
+> Data encrypted using one-way encryption cannot be reversed. It is commonly used for password storage. The same 
+> input produces the same output, and it is impossible to deduce the input from the output.
+
+#### Common One-Way Encryption Algorithms
+
+- MD5 (Not recommended, vulnerable to collision attacks)
+- SHA-1 (Not recommended, insufficient security)
+- SHA-256 / SHA-3 (More secure options)
+- Argon2 (Currently the most recommended password hashing algorithm, strong resistance to GPU attacks)
+
+### Symmetric Encryption
+
+> The same key is used for both encryption and decryption. It is efficient but has complex key management challenges.
+
+#### Common Algorithms
+
+- AES (Advanced Encryption Standard, recommended)
+- DES (Triple DES is no longer recommended)
+
+### Asymmetric Encryption
+
+> Encryption and decryption use different keys: a Public Key and a Private Key. There is no need to share the key, ensuring high security, though it is slower.
+
+#### Common Algorithms
+
+- RSA
+- ECC(Elliptic Curve Cryptography)
+- DSA(Digital Signature Algorithm)
+
+---
