@@ -1,3 +1,8 @@
+
+## **[English](https://github.com/AlfredThor/Encipher)** **[中文](https://github.com/AlfredThor/Encipher/blob/master/README_CN.md)**
+
+---
+
 ## 基本概念
 
 - 加密: 讲明文数据转换为无法直接读取的密文.

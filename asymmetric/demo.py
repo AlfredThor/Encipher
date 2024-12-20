@@ -5,6 +5,7 @@ from cryptography.exceptions import InvalidSignature
 
 
 class AsymmetricCrypto:
+
     def __init__(self):
         self.rsa_private_key = None
         self.rsa_public_key = None

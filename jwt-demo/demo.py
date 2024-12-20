@@ -32,10 +32,8 @@ class Permissions():
             payload = jwt.decode(token, self.secret, algorithms=['HS256'])
             return {'code':200, 'user_id':payload['sub']}
         except jwt.ExpiredSignatureError:
-            # raise HTTPException(status_code=400, detail='Token已经超期，请重新登录！')
-            return {'code': 400, 'message': 'Token超期，请重新登录！'}
+            return {'code': 400, 'message': 'Token超期！'}
         except jwt.InvalidTokenError as e:
-            # raise HTTPException(status_code=400, detail='非法的token！请重新登陆!')
             return {'code': 400, 'message': '非法的token！'}
 
 
