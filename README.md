@@ -17,3 +17,12 @@ if __name__ == '__main__':
     cbc_data = pattern_cbc.aesdecrypt(cbc_text)
     print('CBC加密模式密文：',cbc_data)
 ```
+
+---
+
+## Basic concept
+
+- Encryption: Converts plaintext data to ciphertext that cannot be read directly.
+- Decryption: Restore ciphertext to plain text.
+- Algorithm: A mathematical formula or method for encryption and decryption.
+- Key: A key part of encryption and decryption, security depends on the confidentiality of the key.
